@@ -1,0 +1,194 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+span {
+    margin: 0px;
+    padding: 0px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+input::placeholder {
+    color: rgba(45, 45, 45, 0.7);
+}
+
+input,
+button,
+input:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+.mainContent .logoDiv {
+    background: rgba(66, 135, 249, 0.3);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent .loginDiv {
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.mainContent .loginDiv .formDiv {
+    width: 50%;
+    padding: 150px 100px;
+}
+
+.mainContent .loginDiv .formDiv .formContent img {
+    margin-bottom: 55px;
+}
+
+.mainContent .loginDiv .formDiv .formContent h3 {
+    font-weight: 800;
+    font-size: 28px;
+    color: #151522;
+    margin-bottom: 14px;
+}
+
+.mainContent .loginDiv .formDiv .formContent p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3A3737;
+    margin-bottom: 5px;
+}
+
+.mainContent .loginDiv .formDiv .formContent p a {
+    color: #489BFF;
+    text-decoration: underline;
+}
+
+.mainContent .loginDiv .formDiv .formContent form {
+    margin: 40px 0px;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .labelInput {
+    margin-bottom: 20px;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .labelInput label {
+    color: #151522;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .labelInput input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(228, 228, 228, 0.9);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv label {
+    color: #A3AED0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv a {
+    color: #4287F9;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mainContent .loginDiv .formDiv .formContent form button {
+    background: #489BFF;
+    border-radius: 5px;
+    padding: 14px 31px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv input[type=checkbox] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    outline: none;
+    content: none;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv input[type=checkbox]:before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 10px;
+    color: transparent !important;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 0.5px solid rgba(45, 45, 45, 0.7);
+    margin-right: 2px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv input[type=checkbox]:checked:before {
+    color: black !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainContent .loginDiv .formDiv {
+        padding: 150px 70px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .mainContent .loginDiv .formDiv {
+        padding: 150px 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mainContent .loginDiv{
+        display: block;
+    }
+    .mainContent .logoDiv{
+        display: none;
+    }
+    .mainContent .loginDiv .formDiv{
+        width: 100%;
+    }
+    .mainContent .loginDiv .formDiv .formContent p{
+        font-size: 12px;
+    }
+    .mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv label{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 568px) {
+    .mainContent .loginDiv .formDiv {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
