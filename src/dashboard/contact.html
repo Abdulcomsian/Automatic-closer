@@ -1,0 +1,335 @@
+<html>
+<title>Dashboard</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<head>
+    <link rel="stylesheet" href="../assets/dashboard/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+</head>
+
+<body>
+    <main class="mainContent">
+        <div class="dashboardLayout">
+            <div class="sideBar mobileHide">
+                <div class="logo">
+                    <img src="../../assets/img/logo.png" alt="">
+                </div>
+                <div class="menuDiv">
+                    <ul>
+                        <li>
+                            <a href=""><img src="../../assets/img/dashboard.png" alt="" class="img-fluid"> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/activity.png" alt="" class="img-fluid"> Activity</a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/library.png" alt="" class="img-fluid"> Library</a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/security.png" alt="" class="img-fluid"> Security</a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/schedules.png" alt="" class="img-fluid"> Schedules</a>
+                        </li>
+                        <li class="active">
+                            <a href=""><img src="../../assets/img/contact.png" alt="" class="img-fluid"> Contacts</a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/setting.png" alt="" class="img-fluid"> Settings</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="logoutText">
+                    <a href=""><img src="../../assets/img/logout.png" alt="" class="img-fluid"> Log Out</a>
+                </p>
+            </div>
+            <div class="sideBar desktopHide">
+                <div class="logo">
+                    <img src="../../assets/img/mobileLogo.png" alt="" class="img-fluid">
+                </div>
+                <div class="menuDiv">
+                    <ul>
+                        <li>
+                            <a href=""><img src="../../assets/img/dashboard.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Dashboard</span>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/activity.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Activity</span>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/library.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Library</span>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/security.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Security</span>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/schedules.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Schedules</span>
+                        </li>
+                        <li class="active">
+                            <a href=""><img src="../../assets/img/contact.png" alt="" class="img-fluid"></a>
+                            <span class="tooltip">Contacts</span>
+                        </li>
+                        <li>
+                            <a href=""><img src="../../assets/img/setting.png" alt="" class="img-fluid"> </a>
+                            <span class="tooltip">Settings</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="logoutText">
+                    <a href=""><img src="../../assets/img/logout.png" alt="" class="img-fluid"></a>
+                    <span class="tooltip">logout</span>
+                </p>
+            </div>
+            <div class="contentDiv">
+                <header>
+                    <h3>Contacts</h3>
+                    <div class="userOptions">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../../assets/img/searchIcon.png" alt="" class="img-fluid">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../../assets/img/notification.png" alt="" class="img-fluid">
+                                    <span class="count"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    John Doe <i class="fa fa-angle-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="tableDiv">
+                    <div class="datePicker">
+                        <span class="arrowLeft"><i class="fa fa-chevron-left"></i></span>
+                        <span><p class="textSpan"><span>April 2022</span> <img src="../../assets/img/datePicker.png" alt="" class="img-fluid"><input type="date" name="" id="datePicker"></p></span>
+                        <span class="arrowRight"><i class="fa fa-chevron-right"></i></span>
+                    </div>
+                    <table id="table_id" class="display table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge paid">Paid</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123456789</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>00.0</td>
+                                <td>
+                                    <p class="commonBadge failed">Failed</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script>
+    var  months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var currentMonth, currentYear, currentDate, month;
+    var date = new Date();
+    currentMonthIndex= date.getMonth();
+    currentMonth= date.getMonth();
+    month=currentMonth;
+    month=month+2;
+    currentMonth=months[currentMonth]
+    currentYear=date.getFullYear();
+    currentDate=date.getDate();
+    $(document).ready(function () {
+        $('#table_id').DataTable({
+            language: {
+                oPaginate: {
+                    sNext: '<i class="fa fa-angle-right"></i>',
+                    sPrevious: '<i class="fa fa-angle-left"></i>',
+                },
+                searchPlaceholder: "Search",
+                search: '<i class="fa fa-search"></i>'
+            }
+        });
+        $("table tr th").removeClass("sorting");
+        $("table tr th").removeClass("sorting_asc");
+    });
+    $('#datePicker').change(function(){
+        var dt = new Date( $(this).val());
+        currentMonth=dt.getMonth();
+        var year = dt.getFullYear();
+        currentYear= year;
+        $(".textSpan span").html(months[dt.getMonth()] + " "+year )
+        $("#datePicker").val(months[dt.getMonth()] + " "+currentYear)
+    })
+    $(".arrowRight").click(function(){
+        if(currentMonthIndex){
+            console.log("here "+currentYear + "-" +"0"+month + "-"+ currentDate)
+            currentMonth=currentMonthIndex+1;
+            $(".textSpan span").html(months[currentMonth] + " "+currentYear )
+            currentMonthIndex++;
+           $("#datePicker").val(currentYear + "-" +"0"+month + "-"+ currentDate)
+           month=month+1;
+        } else{
+            console.log("here 2")
+            currentMonth=currentMonth+1;
+            $(".textSpan span").html(months[currentMonth] + " "+currentYear )
+            $("#datePicker").val(currentYear + "-" +"0"+currentMonth + "-"+ currentDate)
+        }
+        
+    })
+    $(".arrowLeft").click(function(){
+        currentMonth=currentMonth-1;
+        $(".textSpan span").html(months[currentMonth] + " "+currentYear )
+        $("#datePicker").val(currentYear + "-" +"0"+currentMonth + "-"+ currentDate)
+    })
+</script>
+
+</html>
