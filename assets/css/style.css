@@ -74,7 +74,7 @@ body {
 
 .mainContent .loginDiv .formDiv .formContent p {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     color: #3A3737;
     margin-bottom: 5px;
 }
@@ -107,6 +107,7 @@ body {
     border-radius: 5px;
     padding: 12px;
     font-size: 16px;
+    font-weight: 300;
 }
 
 .mainContent .loginDiv .formDiv .formContent form .forgotRemberDiv {
@@ -293,6 +294,8 @@ body {
     border-bottom: 1px solid #F4F7FE;
     position: fixed;
     width: 80%;
+    background-color: #fff;
+    z-index: 9999999999;
 }
 .mainContent .dashboardLayout .contentDiv header .menuBtn{
     position: absolute;
@@ -324,12 +327,43 @@ body {
 }
 
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li {
-    padding: 0px 10px;
+    padding:10px;
 }
 
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li a {
     font-weight: 700;
     color: #000000;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu a{
+    font-weight: 400;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu a i{
+    padding-right: 10px;
+    color: #489aff;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu{
+    position: absolute;
+    right: 30px;
+    background: #FFFFFF !important;
+    border-radius: 10px !important;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
+    width: 200px;
+    top: 80px;
+    opacity: 0;
+    transition: all .5s;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li.openDropDownMenu{
+    cursor: pointer;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul{
+    display: block;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul li:hover{
+    background-color: #489aff;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul li:hover i,
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul li:hover a{
+    color: #fff;
 }
 
 .mainContent .dashboardLayout .contentDiv .tableDiv {
@@ -420,14 +454,18 @@ table.dataTable tbody td {
     margin: 0px 3px;
 }
 span .paginate_button{
-    color: #4287F9 !important;
+    color: #489aff !important;
 }
 .previous {
     min-width: 18px !important;
-    background: #4287F9 !important;
+    background: #489aff !important;
     border-radius: 4px !important;
     padding: 0px !important;
     height: 20px !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    background-color: #489aff96 !important;
+    color: #fff !important;
 }
 
 .next {
@@ -509,7 +547,7 @@ table.dataTable.display tbody td {
     position: absolute;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 9999999999999;
     right: 30px;
     top: 40px;
 }
@@ -673,11 +711,11 @@ input[type="date"]{
     }
 
     .mainContent .dashboardLayout .contentDiv header {
-        width: 90%;
-    }
-
-    .mainContent .dashboardLayout .contentDiv header {
         padding: 15px 30px;
+        width: 100%;
+    }
+    .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu{
+        top: 60px;
     }
 
     .mainContent .dashboardLayout .contentDiv {
@@ -766,6 +804,12 @@ input[type="date"]{
 }
 
 @media screen and (max-width: 568px) {
+    .mainContent .dashboardLayout .contentDiv .tableDiv{
+        margin-top: 20%;
+    }
+    .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu li{
+        display: block;
+    }
     .datepicker-dropdown{
         position: absolute !important;
         right: 15px !important;
