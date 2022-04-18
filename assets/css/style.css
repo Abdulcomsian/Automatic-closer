@@ -290,7 +290,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 30px;
+    padding: 35.5px 30px;
     border-bottom: 1px solid #F4F7FE;
     position: fixed;
     width: 80%;
@@ -328,6 +328,7 @@ body {
 
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li {
     padding:10px;
+    position: relative;
 }
 
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li a {
@@ -339,7 +340,6 @@ body {
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu a i{
     padding-right: 10px;
-    color: #489aff;
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu{
     position: absolute;
@@ -352,11 +352,19 @@ body {
     opacity: 0;
     transition: all .5s;
 }
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu li span{
+    position: absolute;
+    right: 10px;
+    top: 16px;
+}
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li.openDropDownMenu{
     cursor: pointer;
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul{
     display: block;
+}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul li img{
+    width: 18px;
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu ul li:hover{
     background-color: #489aff;
@@ -445,23 +453,30 @@ table.dataTable tbody td {
 .dataTables_paginate span .paginate_button,
 .dataTables_paginate span .paginate_button:hover {
 
-    background: #FFFFFF !important;
     border: 1px solid #DFE3E8 !important;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 0px !important;
     font-size: 12px;
     margin: 0px 3px;
+    color: #fff !important;
+}
+.dataTables_paginate  span a{
+    background-color: #489aff !important;
+    border-radius: 3px !important;
+    color: #fff !important;
 }
 span .paginate_button{
     color: #489aff !important;
 }
 .previous {
     min-width: 18px !important;
-    background: #489aff !important;
+    background: #fff !important;
     border-radius: 4px !important;
     padding: 0px !important;
     height: 20px !important;
+    color: #333 !important;
+    border: 1px solid #DFE3E8 !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover{
     background-color: #489aff96 !important;
@@ -474,14 +489,17 @@ span .paginate_button{
     border-radius: 4px !important;
     padding: 0px !important;
     height: 20px !important;
-    color: #fff !important;
+    color: #333 !important;
     border: 1px solid #DFE3E8 !important;
 }
 
 .previous i {
-    color: #fff;
+    color: #151522;
 }
-
+.dataTables_paginate span a.current{
+    background-color: #489aff !important;
+    background: #489aff7d !important;
+}
 .next:hover i {
     color: #151522 !important;
 }
@@ -629,9 +647,12 @@ input[type="date"]{
     color: #fff !important;
 }
 .datepicker table tr td.day:hover, .datepicker table tr td.day.focused {
-    background: #489aff5e !important;
+    background: #489aff !important;
     cursor: pointer;
     color: #fff;
+}
+span a[aria-controls="table_id"]{
+    color: #fff !important;
 }
 @media screen and (max-width: 1200px) {
     .datepicker-dropdown{
