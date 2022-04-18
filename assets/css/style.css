@@ -343,12 +343,12 @@ body {
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu{
     position: absolute;
-    right: 30px;
+    right: 0px;
     background: #FFFFFF !important;
     border-radius: 10px !important;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
     width: 200px;
-    top: 80px;
+    top: 45px;
     opacity: 0;
     transition: all .5s;
 }
@@ -458,7 +458,6 @@ table.dataTable tbody td {
     border-radius: 4px;
     padding: 0px !important;
     font-size: 12px;
-    margin: 0px 3px;
     color: #fff !important;
 }
 .dataTables_paginate  span a{
@@ -479,7 +478,7 @@ span .paginate_button{
     border: 1px solid #DFE3E8 !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover{
-    background-color: #489aff96 !important;
+    background-color: #489aff !important;
     color: #fff !important;
 }
 
@@ -620,8 +619,10 @@ thead tr th:last-child {
 input[type="date"]{
     font-family: 'Courier New', Courier, monospace;
 }
-
-
+.datepicker table tr td.active.active{
+    background-color: #489aff !important;
+    background-image: none !important;
+}
 #datepicker > span:hover{cursor: pointer;}
 .datepicker-dropdown{
     width: 20%;
