@@ -477,8 +477,10 @@ span .paginate_button{
     color: #333 !important;
     border: 1px solid #DFE3E8 !important;
 }
+.previous:hover{
+    background-color: #fff !important;
+}
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover{
-    background-color: #489aff !important;
     color: #fff !important;
 }
 
@@ -641,6 +643,9 @@ input[type="date"]{
 .datepicker-dropdown tr td,
 .datepicker-dropdown tr th {
     padding: 9px;
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
 }
 .datepicker table tr td.today, .datepicker table tr td.today:hover, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover{
     background-color: #489aff !important;
@@ -737,7 +742,7 @@ span a[aria-controls="table_id"]{
         width: 100%;
     }
     .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu{
-        top: 60px;
+        top: 40px;
     }
 
     .mainContent .dashboardLayout .contentDiv {
