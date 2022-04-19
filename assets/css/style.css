@@ -262,6 +262,10 @@ body {
 .mainContent .dashboardLayout .sideBar .menuDiv ul li a {
     color: #A3AED0;
 }
+.mainContent .dashboardLayout .sideBar .menuDiv ul li a i{
+    margin-right: 10px;
+    font-size: 18px;
+}
 
 .mainContent .dashboardLayout .sideBar .menuDiv ul li.active,
 .mainContent .dashboardLayout .sideBar .menuDiv ul li:hover {
@@ -458,12 +462,11 @@ table.dataTable tbody td {
     border-radius: 4px;
     padding: 0px !important;
     font-size: 12px;
-    color: #fff !important;
+    color: #333 !important;
 }
 .dataTables_paginate  span a{
-    background-color: #489aff !important;
     border-radius: 3px !important;
-    color: #fff !important;
+    color: #333 !important;
 }
 span .paginate_button{
     color: #489aff !important;
@@ -482,6 +485,7 @@ span .paginate_button{
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover{
     color: #fff !important;
+    background-color: #489affa3 !important;
 }
 
 .next {
@@ -496,10 +500,22 @@ span .paginate_button{
 
 .previous i {
     color: #151522;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.next i{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .dataTables_paginate span a.current{
     background-color: #489aff !important;
-    background: #489aff7d !important;
+    background: #489aff !important;
 }
 .next:hover i {
     color: #151522 !important;
@@ -697,7 +713,6 @@ span a[aria-controls="table_id"]{
     .mainContent .dashboardLayout .sideBar .menuDiv ul li a {
         font-size: 12px;
     }
-
     .mainContent .dashboardLayout .contentDiv header h3 {
         font-size: 24px;
     }
