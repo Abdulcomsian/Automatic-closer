@@ -83,6 +83,16 @@
         document.querySelectorAll('.menuDiv .submenu').forEach(function(element){
           
           element.addEventListener('click', function (e) {
+
+            if($(".arrowDown").css("display")=="none"){
+                $(".arrowDown").css("display","block")
+                $(".arrowRightMenu").css("display","none")
+            } else{
+                $(".arrowDown").css("display","none")
+                $(".arrowRightMenu").css("display","block")
+            }
+            
+              
       
             let nextEl = element.nextElementSibling;
             let parentEl  = element.parentElement;	
@@ -92,7 +102,9 @@
                   let mycollapse = new bootstrap.Collapse(nextEl);
                   
                   if(nextEl.classList.contains('show')){
+                      console.log("here 1");
                     mycollapse.hide();
+                    
                   } else {
                       mycollapse.show();
                       // find other submenus with class=show
