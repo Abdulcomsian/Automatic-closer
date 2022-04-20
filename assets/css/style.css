@@ -956,3 +956,22 @@ span a[aria-controls="table_id"]{
     content: "\e10a";
     font-family: "Font Awesome 6 Pro";
 }
+.statusLink{
+    display: flex;
+    align-items: center;
+    color: #A3AED0;
+}
+.statusLink a.icon{
+    width: 16px;
+    height: 16px;
+    display: block;
+    padding: 2px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-right: 13px;
+}
+.statusLink a.icon i{
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+}
