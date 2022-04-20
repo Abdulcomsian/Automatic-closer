@@ -280,7 +280,7 @@ body {
 
 .mainContent .dashboardLayout .sideBar .logoutText {
     position: absolute;
-    bottom: 10px;
+    /* bottom: 10px; */
     left: 40px;
 }
 
@@ -359,7 +359,7 @@ body {
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li .dropDownMenu li span{
     position: absolute;
     right: 10px;
-    top: 16px;
+    top: 14px;
 }
 .mainContent .dashboardLayout .contentDiv header .userOptions ul li.openDropDownMenu{
     cursor: pointer;
@@ -917,3 +917,20 @@ span a[aria-controls="table_id"]{
         font-size: 12px;
     }
 }
+
+
+.menuDiv li .submenu{ 
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+	/* padding-left: 1rem;  */
+	/* padding-right: 1rem; */
+}
+
+.mainContent .dashboardLayout .sideBar .menuDiv ul.submenu li{
+    margin-bottom: 5px;
+}
+
+.mainContent .dashboardLayout .sideBar .menuDiv ul li ul.submenu{padding:0px;margin-top:10px;}
+.mainContent .dashboardLayout .sideBar .menuDiv ul li ul.submenu li{padding:0px;}
+.mainContent .dashboardLayout .contentDiv header .userOptions ul li.openDropDownMenu .username{color:#000;}

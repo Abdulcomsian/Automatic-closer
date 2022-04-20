@@ -14,7 +14,10 @@
         rel="stylesheet">
    <link rel="stylesheet" href="../../assets/css/datatable.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> -->
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head>
 </style>
 
@@ -39,11 +42,23 @@
                             <a href=""><i class="fa-solid fa-chart-line"></i> Activity</a>
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-calendar" aria-hidden="true"></i> Calender</a>
+                            <a href=""><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</a>
                         </li>
-                        <li  class="active">
-                            <a href=""><i class="fa-solid fa-chart-column"></i> Sales Tracking</a>
+                        <li  class="nav-item has-submenu active">
+                            <a class="submenu" href="#">
+                                <i  class="fa-solid fa-chart-column"></i> Sales Tracking
+                                <i style="float:right" class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <ul class="submenu collapse">
+                                <li><a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Mickey Kass </a></li>
+                                <li><a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Clinton Sparks </a></li>
+                                <li><a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Justin Woll </a> </li>
+                                <li><a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Mentorships.com </a> </li>
+                            </ul>
                         </li>
+
+                        
+
                         <li>
                             <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i> Chat</a>
                         </li>
@@ -56,7 +71,7 @@
                     </ul>
                 </div>
                 <p class="logoutText">
-                    <a href=""><img src="../../assets/img/logout.png" alt="" class="img-fluid"> Log Out</a>
+                    <a href=""><img src="../../assets/img/logout.png" alt="" class="img-fluid"> Sign Out</a>
                 </p>
             </div>
             <!-- <div class="sideBar desktopHide">
@@ -120,7 +135,7 @@
                                 </a>
                             </li>
                             <li class="openDropDownMenu">
-                                <a>
+                                <a class="username">
                                     John Doe <i class="fa fa-angle-down"></i>
                                 </a>
                                 <div class="dropDownMenu">
@@ -133,7 +148,9 @@
                                         </li>
                                         <li>
                                             <a href=""><i class="fa fa-circle" aria-hidden="true"></i> Status </a>
-                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <span>
+                                                <i  class="fa-solid fa-caret-down" style="color:#A3AED0;" aria-hidden="true"></i>
+                                            </span>
                                         </li>
                                         <li>
                                             <a href=""><img src="../../assets/img/logout.png" alt=""> Sign Out</a>
@@ -486,84 +503,5 @@
 </script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
-<script>
-    var  months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var currentMonth, currentYear, currentDate, month;
-    var date = new Date();
-    currentMonthIndex= date.getMonth();
-    currentMonth= date.getMonth();
-    month=currentMonth;
-    month=month+2;
-    currentMonth=months[currentMonth]
-    currentYear=date.getFullYear();
-    currentDate=date.getDate();
-    $(document).ready(function () {
-        $('#table_id').DataTable({
-            language: {
-                oPaginate: {
-                    sNext: '<i class="fa fa-angle-right"></i>',
-                    sPrevious: '<i class="fa fa-angle-left"></i>',
-                },
-                searchPlaceholder: "Search",
-                search: '<i class="fa fa-search"></i>'
-            }
-        });
-        $("table tr th").removeClass("sorting");
-        $("table tr th").removeClass("sorting_asc");
-    });
-    $('#datePicker').change(function(){
-        var dt = new Date( $(this).val());
-        currentMonth=dt.getMonth();
-        var year = dt.getFullYear();
-        currentYear= year;
-        $(".textSpan span").html(months[dt.getMonth()] + " "+year )
-        $("#datePicker").val(months[dt.getMonth()] + " "+currentYear)
-    })
-    $(".arrowRight").click(function(){
-        if(currentMonthIndex){
-            console.log("here "+currentYear + "-" +"0"+month + "-"+ currentDate)
-            currentMonth=currentMonthIndex+1;
-            $(".textSpan span").html(months[currentMonth] + " "+currentYear )
-            currentMonthIndex++;
-           $("#datePicker").val(currentYear + "-" +"0"+month + "-"+ currentDate)
-           month=month+1;
-        } else{
-            console.log("here 2")
-            currentMonth=currentMonth+1;
-            $(".textSpan span").html(months[currentMonth] + " "+currentYear )
-            $("#datePicker").val(currentYear + "-" +"0"+currentMonth + "-"+ currentDate)
-        }
-        
-    })
-    $(".arrowLeft").click(function(){
-        currentMonth=currentMonth-1;
-        $(".textSpan span").html(months[currentMonth] + " "+currentYear )
-        $("#datePicker").val(currentYear + "-" +"0"+currentMonth + "-"+ currentDate)
-    })
-    $(".menuBtn").click(function(){
-        $(".sideBar").css("left", "0px");
-        $(".contentDiv").css("filter", "blur(4px)")
-    })
-    $(".closeMenu").click(function(){
-        $(".sideBar").css("left", "-350px");
-        $(".contentDiv").css("filter", "blur(0px)")
-    })
-    $('#datepicker').datepicker({
-        todayHighlight: true
-    });
-    $(".openDropDownMenu a").click(function(){
-        if($(".dropDownMenu").css("opacity")==0){
-            $(".dropDownMenu").css("opacity","1")
-            $(".datePicker").css("z-index", "0")
-        } else{
-            $(".dropDownMenu").css("opacity","0")
-            $(".datePicker").css("z-index", "9999999999999999")
-        }
-    })
-    $(document).one('ready', function(){
-        $(".dataTables_wrapper .dataTables_paginate .paginate_button.current").removeAttr( 'style' );;
-    });
-   
-</script>
-
+<script src="../../assets/js/custom.js"></script>
 </html>
