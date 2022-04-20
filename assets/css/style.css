@@ -938,6 +938,7 @@ span a[aria-controls="table_id"]{
 
 .mainContent .dashboardLayout .sideBar .menuDiv ul li ul.submenu li a{
     color: #A3AED0;
+    padding-left:40px;
 }
 .mainContent .dashboardLayout .sideBar .menuDiv ul li ul.submenu li a:hover{
     color: #fff;
