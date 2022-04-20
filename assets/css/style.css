@@ -952,3 +952,7 @@ span a[aria-controls="table_id"]{
 .arrowDown{
     display: none;
 }
+.fa-circle-ellipsis:before {
+    content: "\e10a";
+    font-family: "Font Awesome 6 Pro";
+}
