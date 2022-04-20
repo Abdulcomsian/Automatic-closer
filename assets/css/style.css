@@ -178,7 +178,7 @@ body {
 .mainContent .dashboardLayout .sideBar {
     width: 20%;
     border-right: 1px solid #F4F7FE;
-    height: 97%;
+    /* height: 97%; */
     top: 0px;
     left: 0px;
 }
@@ -280,7 +280,7 @@ body {
 
 .mainContent .dashboardLayout .sideBar .logoutText {
     position: absolute;
-    /* bottom: 10px; */
+    bottom: 5px;
     left: 40px;
 }
 
